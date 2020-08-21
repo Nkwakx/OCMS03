@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/main/css/animate.css" rel="stylesheet" />
+
+    <link href="~/main/css/animate.css" rel="stylesheet" />
+    <link href="~/main/css/aos.css" rel="stylesheet" />
+    <link href="~/main/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/main/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/main/css/flaticon.css" rel="stylesheet" />
+    <link href="~/main/css/icomoon.css" rel="stylesheet" />
+    <link href="~/main/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/main/css/jquery.timepicker.css" rel="stylesheet" />
+    <link href="~/main/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/main/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/main/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/main/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/main/css/style.css" rel="stylesheet" />
+    <link href="~/main/css/styles.css" rel="stylesheet" />
+    <link href="~/main/css/styless.css" rel="stylesheet" />
+    <link href="~/main/fonts/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/main/fonts/flaticon/font/flaticon.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="py-md-3 py-4 border-bottom">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+                <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
+                    <a class="d-flex justify-content-center align-items-center" href="#">
+                        +34 586 778 8892
+                    </a><span>Toll Free</span>
+                </div>
+                <div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
+                    <div class="icon d-flex justify-content-center align-items-center order-md-last">
+                        <span class="icon-map"></span>
+                    </div>
+                    <div class="pr-md-4 pl-md-0 pl-3 text">
+                        <p class="con"><span>Government</span> <span>Health Care</span></p>
+                        <p class="con">The Most Valuable Thing Is Your Health</p>
+                    </div>
+                </div>
+                <div class="col-md-4 order-md-3 d-flex topper mb-md-0 align-items-center">
+                    <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                    <div class="text pl-3 pl-md-3">
+                        <p class="hr"><span>Open Hours</span></p>
+                        <p class="time"><span>Mon - Sat:</span> <span>8:00am - 10:00pm</span> Sun: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a href="#section-counter" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a asp-controller="Hospital" asp-action="Index" class="nav-link">Find Hospital</a></li>
+                    <li class="nav-item"><a asp-controller="Clinic" asp-action="Index" class="nav-link">Find Clinic</a></li>
+                    <li class="nav-item active"><a class="nav-link">Online Booking</a></li>
+                    <li class="dropdown dropright">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Home" asp-action="Login">Login</a></li>
+                            <li><a asp-controller="Home" asp-action="Login">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
+        <div class="wrapper">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate fadeInUp ftco-animated">
+
+                    <h2 class="mb-4">Some fun facts</h2>
+                    <span class="subheading">Online  booking system for any government health sectors around SA</span>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="60">60</strong>
+                                    <span>Hospital</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="200">200</strong>
+                                    <span>Doctors</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="100">100</strong>
+                                    <span>Clinics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <strong class="number" data-number="200">200</strong>
+                                    <span>Reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-services" id="services">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-4 ftco-animate py-5 nav-link-wrap">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link px-4 active" id="v-pills-master-tab" data-toggle="pill" href="#v-pills-master" role="tab" aria-controls="v-pills-master" aria-selected="true"><span class="mr-3 flaticon-cardiogram"></span> Cardiology</a>
+
+                        <a class="nav-link px-4" id="v-pills-buffet-tab" data-toggle="pill" href="#v-pills-buffet" role="tab" aria-controls="v-pills-buffet" aria-selected="false"><span class="mr-3 flaticon-neurology"></span> Neurology</a>
+
+                        <a class="nav-link px-4" id="v-pills-fitness-tab" data-toggle="pill" href="#v-pills-fitness" role="tab" aria-controls="v-pills-fitness" aria-selected="false"><span class="mr-3 flaticon-stethoscope"></span> Diagnostic</a>
+
+                        <a class="nav-link px-4" id="v-pills-reception-tab" data-toggle="pill" href="#v-pills-reception" role="tab" aria-controls="v-pills-reception" aria-selected="false"><span class="mr-3 flaticon-tooth"></span> Dental</a>
+
+                        <a class="nav-link px-4" id="v-pills-sea-tab" data-toggle="pill" href="#v-pills-sea" role="tab" aria-controls="v-pills-sea" aria-selected="false"><span class="mr-3 flaticon-vision"></span> Ophthalmology</a>
+
+                        <a class="nav-link px-4" id="v-pills-spa-tab" data-toggle="pill" href="#v-pills-spa" role="tab" aria-controls="v-pills-spa" aria-selected="false"><span class="mr-3 flaticon-ambulance"></span> Emergency</a>
+                    </div>
+                </div>
+                <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center">
+
+                    <div class="tab-content pl-md-5" id="v-pills-tabContent">
+
+                        <div class="tab-pane fade show active py-5" id="v-pills-master" role="tabpanel" aria-labelledby="v-pills-master-tab">
+                            <span class="icon mb-3 d-block flaticon-cardiogram"></span>
+                            <h2 class="mb-4">Cardiology Department</h2>
+                            <p>They’re experts on the heart and blood vessels. You might see them for heart failure, a heart attack, high blood pressure, or an irregular heartbeat.></p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-buffet" role="tabpanel" aria-labelledby="v-pills-buffet-tab">
+                            <span class="icon mb-3 d-block flaticon-neurology"></span>
+                            <h2 class="mb-4">Neurogoly Department</h2>
+                            <p>Diagnose, treat and manage disorders that affect the the brain and spinal cord and the</p>
+                            <p>nerves and muscles which activate movement and transmit sensation from all parts of the body to the brain.</p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-fitness" role="tabpanel" aria-labelledby="v-pills-fitness-tab">
+                            <span class="icon mb-3 d-block flaticon-stethoscope"></span>
+                            <h2 class="mb-4">Anesthesiologists</h2>
+                            <p>These doctors give you drugs to numb your pain or to put you under during surgery, childbirth, or other procedures. They monitor your vital signs while you’re under anesthesia.</p>
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-fitness" role="tabpanel" aria-labelledby="v-pills-fitness-tab">
+                            <span class="icon mb-3 d-block flaticon-stethoscope"></span>
+                            <h2 class="mb-4">Diagnostic Department</h2>
+                            <p>Determine which disease or condition explains a person's symptoms and signs.</p>
+                            <p>Collecting patient medical history and physical examination  o the person seeking medical care.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-reception" role="tabpanel" aria-labelledby="v-pills-reception-tab">
+                            <span class="icon mb-3 d-block flaticon-tooth"></span>
+                            <h2 class="mb-4">Dental Departments</h2>
+                            <p>Diagnose, prevent and treat diseases, disorders and conditions of oral cavity</p>
+                            <p>Promote good oral health and help you keep your mouth, gums and teeth healthy to prevent tooth decay and other oal problems.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-sea" role="tabpanel" aria-labelledby="v-pills-sea-tab">
+                            <span class="icon mb-3 d-block flaticon-vision"></span>
+                            <h2 class="mb-4">Ophthalmology Departments</h2>
+                            <p>Diagnose, treat and prevent diseases of the eye and visual system</p>
+                            <p>Ophthalmology involves diagnosis and therapy pf such conditions, along with microsurgery.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade py-5" id="v-pills-spa" role="tabpanel" aria-labelledby="v-pills-spa-tab">
+                            <span class="icon mb-3 d-block flaticon-ambulance"></span>
+                            <h2 class="mb-4">Emergency Departments</h2>
+                            <p>Responsible  for the provision of medical and surgical care to patients arriving at the hospital in need of immediate care.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctor" class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Our Experienced Doctors</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="block-2">
+                        <div class="flipper">
+                            <div class="front" style="background-image: url(images/doctor-1.jpg);">
+                                <div class="box">
+                                    <h2>Aldin Powell</h2>
+                                    <p>Neurologist</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <blockquote>
+                                    <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+                                </blockquote>
+                                <div class="author d-flex">
+                                    <div class="image mr-3 align-self-center">
+                                        <div class="img" style="background-image: url(images/doctor-1.jpg);"></div>
+                                    </div>
+                                    <div class="name align-self-center">Aldin Powell <span class="position">Neurologist</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .flip-container -->
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="block-2">
+                        <div class="flipper">
+                            <div class="front" style="background-image: url(images/doctor-2.jpg);">
+                                <div class="box">
+                                    <h2>Aldin Powell</h2>
+                                    <p>Pediatrician</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <blockquote>
+                                    <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+                                </blockquote>
+                                <div class="author d-flex">
+                                    <div class="image mr-3 align-self-center">
+                                        <div class="img" style="background-image: url(images/doctor-2.jpg);"></div>
+                                    </div>
+                                    <div class="name align-self-center">Aldin Powell <span class="position">Pediatrician</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .flip-container -->
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="block-2">
+                        <div class="flipper">
+                            <div class="front" style="background-image: url(images/doctor-3.jpg);">
+                                <div class="box">
+                                    <h2>Aldin Powell</h2>
+                                    <p>Ophthalmologist</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <blockquote>
+                                    <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+                                </blockquote>
+                                <div class="author d-flex">
+                                    <div class="image mr-3 align-self-center">
+                                        <div class="img" style="background-image: url(images/doctor-3.jpg);"></div>
+                                    </div>
+                                    <div class="name align-self-center">Aldin Powell <span class="position">Ophthalmologist</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .flip-container -->
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="block-2">
+                        <div class="flipper">
+                            <div class="front" style="background-image: url(images/doctor-4.jpg);">
+                                <div class="box">
+                                    <h2>Aldin Powell</h2>
+                                    <p>Pulmonologist</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <!-- back content -->
+                                <blockquote>
+                                    <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+                                </blockquote>
+                                <div class="author d-flex">
+                                    <div class="image mr-3 align-self-center">
+                                        <div class="img" style="background-image: url(images/doctor-4.jpg);"></div>
+                                    </div>
+                                    <div class="name align-self-center">Aldin Powell <span class="position">Pulmonologist</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .flip-container -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="py-md-3 py-4 border-bottom">
+
+
+
+        <footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+                                <h5>About Us</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+                                </p>
+                            </div>
+                        </div>
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+                                <h5>Information</h5>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Laboratory</a></li>
+                                    <li><a href="#">Medical treatment</a></li>
+                                    <li><a href="#">Terms & conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+                                <h5>Health Care SA</h5>
+                                <p>
+                                    Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                                        </span> Monday - Saturday, 8am to 10pm
+                                    </li>
+                                    <li>
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                                        </span> +62 0888 904 711
+                                    </li>
+                                    <li>
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                        </span> hello@healthCare.Org
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+                                <h5>Our location</h5>
+                                <p>Every Region Around The Country</p>
+
+                            </div>
+                        </div>
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+                                <h5>Follow us</h5>
+                                <ul class="company-social">
+                                    <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                                    <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="text-left">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="wow fadeInRight" data-wow-delay="0.1s">
+                                <div class="text-right">
+                                    <div class="credits">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    @RenderSection("Scripts", required: false)
+
+
+    <script src="~/main/js/jquery.min.js"></script>
+    <script src="~/main/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/main/js/popper.min.js"></script>
+    <script src="~/main/js/bootstrap.min.js"></script>
+    <script src="~/main/js/jquery.easing.1.3.js"></script>
+    <script src="~/main/js/jquery.waypoints.min.js"></script>
+    <script src="~/main/js/jquery.stellar.min.js"></script>
+    <script src="~/main/js/owl.carousel.min.js"></script>
+    <script src="~/main/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/main/js/aos.js"></script>
+    <script src="~/main/js/jquery.animateNumber.min.js"></script>
+    <script src="~/main/js/bootstrap-datepicker.js"></script>
+    <script src="~/main/js/jquery.timepicker.min.js"></script>
+    <script src="~/main/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/main/js/google-map.js"></script>
+    <script src="~/main/js/main.js"></script>
+</body>
+</html>

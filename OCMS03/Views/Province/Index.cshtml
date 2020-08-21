@@ -1,0 +1,12 @@
+﻿@model IEnumerable<OCMS03.Models.Content.Province>
+
+
+
+    <div id="view-all">
+        @await Html.PartialAsync("_ViewAll", Model)
+    </div>
+
+    @section Scripts{
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+

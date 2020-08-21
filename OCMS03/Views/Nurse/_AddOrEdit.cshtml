@@ -1,0 +1,178 @@
+﻿@model OCMS03.Models.ViewModels.NurseCreateFormViewModel
+
+@{
+    ViewData["Title"] = "AddEdit";
+}
+
+<div class="modal fade" id="addPopUp">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-light">
+                <h5 class="modal-title text-white">Add Nurse</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form asp-action="AddOrEdit" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input asp-for="FirstName" class="form-control-sm col-md-12" placeholder="First Name" />
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input asp-for="LastName" class="form-control-sm col-md-12" placeholder="Last Name" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label asp-for="Idnumber" class="col-md-2 col-form-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="Idnumber" class="form-control-sm col-md-12" />
+                                        <span asp-validation-for="Idnumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-row col-md-6">
+                                    <label asp-for="Dob" class="col-md-4 col-form-label"></label>
+                                    <div class="col-md-8">
+                                        <input asp-for="Dob" class="form-control-sm col-md-12" placeholder="Date Of Birth" />
+                                        <span asp-validation-for="Dob" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input asp-for="EmailAddress" class="form-control-sm col-md-12" placeholder="Email Address" />
+                                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label asp-for="Gender" class="col-md-6 col-form-label"></label>
+                                    <div class="form-group col-md-6">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" asp-for="Gender" class="form-check-input" value=" Male" />Male
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" asp-for="Gender" class="form-check-input" value=" Female" />Female
+                                        </div>
+                                        <span asp-validation-for="Gender" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="form-group">
+                                        <input asp-for="Password" class="form-control-sm col-md-12" placeholder="Password" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="PhoneNumber" class="form-control-sm col-md-12" placeholder="Phone Number" />
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <select asp-for="ProvinceId" class="form-control-sm col-md-12" asp-items="ViewBag.ProvinceId">
+                                        <option value="">-- Select Province --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select asp-for="DistrictId" class="form-control-sm col-md-12" asp-items="ViewBag.DistrictId">
+                                        <option value="">-- Select District --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <input asp-for="AddressLine1" class="form-control-sm col-md-12" placeholder="AddressLine 1" />
+                                    <span asp-validation-for="AddressLine1" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input asp-for="AddressLine2" class="form-control-sm col-md-12" placeholder="AddressLine 2" />
+                                    <span asp-validation-for="AddressLine2" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <select asp-for="CityId" class="form-control-sm col-md-12" asp-items="ViewBag.CityId">
+                                        <option value="">-- Select City --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select asp-for="SuburbId" class="form-control-sm col-md-12" asp-items="ViewBag.SuburbId">
+                                        <option value="">-- Select Suburb --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input asp-for="PostalCode" class="form-control-sm col-md-12" placeholder="Postal Code" />
+                                    <span asp-validation-for="PostalCode" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input asp-for="NurseType" class="form-control-sm col-md-12" placeholder="Nurse Type" />
+                                    <span asp-validation-for="NurseType" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select asp-for="DepartmentId" class="form-control-sm col-md-12" asp-items="ViewBag.DepartmentId">
+                                        <option value="">-- Select Department --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <select asp-for="HospitalId" class="form-control-sm col-md-12" asp-items="ViewBag.HospitalId">
+                                        <option value="">-- Select Hospital --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select asp-for="ClinicId" class="form-control-sm col-md-12" asp-items="ViewBag.ClinicId">
+                                        <option value="">-- Select Clinic --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input asp-for="NextOfName" class="form-control-sm col-md-12" placeholder="Next Of Kin Name" />
+                                    <span asp-validation-for="NextOfName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input asp-for="NextOfKinSurname" class="form-control-sm col-md-12" placeholder="Next Of Kin Surname" />
+                                    <span asp-validation-for="NextOfKinSurname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input asp-for="NextOfKinNumber" class="form-control-sm col-md-12" placeholder="Next Of Kin Number" />
+                                    <span asp-validation-for="NextOfKinNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-save="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

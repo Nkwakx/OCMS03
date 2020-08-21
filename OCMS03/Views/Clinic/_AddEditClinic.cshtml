@@ -1,0 +1,65 @@
+﻿@model OCMS03.Models.Content.Clinic
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<link href="~/search/css/jquery-customselect-1.9.1.css" rel="stylesheet" />
+<link href="~/search/src/jquery-customselect.css" rel="stylesheet" />
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="modal fade" id="addPopUp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title text-white">Add Clinic</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form asp-action="Create" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="ClinicName" class="form-control-sm col-md-12"></label>
+                                    <input asp-for="ClinicName" class="form-control" />
+                                    <span asp-validation-for="ClinicName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CityId" class="control-label"></label>
+                                    <select id="standard" asp-for="CityId" class="custom-select" data-search="true" asp-items="ViewBag.CityId">
+                                        <option value="">-- Select City --</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-save="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script src="~/search/js/jquery-customselect-1.9.1.min.js"></script>
+        <script src="~/search/src/jquery-customselect.js"></script>
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+        <script>
+            $(document).ready(function () {
+                $("#standard").customselect({ search: true });
+            });
+        </script>
+    }
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet"
+          asp-href-include="~/admin/assets/lib/css/bootstrap.min.css" />
+    <style>
+        .input-validation-error {
+            border-color: red;
+            background-color: #fee;
+        }
+    </style>
+    <script src="~/admin/assets/lib/jquery/jquery.min.js"></script>
+    <script src="~/admin/assets/lib/jquery-Validation/jquery.validate.min.js"></script>
+    <script src="~/admin/assets/lib/jquery-Validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/admin/assets/jquery/jquery.min.js"></script>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <link href="~/admin/assets/css/Style.css" rel="stylesheet" />
+    <link href="~/admin/modal/css/bootstrap-modal.css" rel="stylesheet" />
+    <link href="~/admin/modal/jquery.modal.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
+
+
+</head>
+<body>
+    <div class="wrapper ">
+        <div class="sidebar" data-color="azure" data-background-color="azure">
+            <div class="logo">
+                <img src="~/admin/assets/img/The Collec...png" width="250" height="180" />
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item  ">
+                        <a asp-controller="Appointment" asp-action="Index" class="nav-link">Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="AppointmentNotes" asp-action="Index" class="nav-link">AppointmentNotes</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="City" asp-action="Index" class="nav-link">City</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Clinic" asp-action="Index" class="nav-link">Clinic</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Department" asp-action="Index" class="nav-link">Deparments</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Region" asp-action="Index" class="nav-link">District</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Province" asp-action="Index" class="nav-link">Province</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Staff" asp-action="Index" class="nav-link">Staff</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Patient" asp-action="Index" class="nav-link">Patient</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a asp-controller="Suburb" asp-action="Index" class="nav-link">Suburb</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-panel m-1 p-1">
+            <div class="bg-info p-2 text-white"><h4>@ViewBag.Title</h4></div>
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-success">@TempData["message"]</div>
+            }
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="javascript:;"></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="py-md-4 py-5 border-top">
+                <div class="py-md-4 py-5 border-top">
+                    <div class="container">
+                        @RenderBody()
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="form-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loaderbody" id="loaderbody">
+        <div class="loader"></div>
+    </div>
+    <footer>
+    </footer>
+    <script src="~/js/site.js"></script>
+    <script src="~/admin/assets/jquery/site/site.js" asp-append-version="true" defer></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

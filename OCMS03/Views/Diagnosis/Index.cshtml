@@ -1,0 +1,77 @@
+﻿@model OCMS03.Infrastructure.PaginatedList<OCMS03.Models.Content.Diagnosis>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div id="PlaceholderHere"></div>
+    <div class="card col-md-12">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <div class="col-lg-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <button type="button" class="btn btn-outline-success fa fa-plus-square" data-toggle="ajax-modal" data-target="#addPopUp" data-url="@Url.Action("Create")"> Add New</button>
+                    </li>
+                </ol>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Diagnosis Description
+                        </th>
+                        <th>
+                            Diagnosis Comment
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiagnosisDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiagnosisComment)
+                        </td>
+                        <td>
+                            <button type="button" data-toggle="ajax-modal" data-target="#addPopUp" data-url="@Url.Action($"Edit/{item.DiagnosisCode}")"><i class="fa fa-marker fa-lg" title="Edit"></i></button>|
+                            <button type="button" data-toggle="ajax-modal" data-target="#addPopUp" data-url="@Url.Action($"Delete/{item.DiagnosisCode}")"><i class="text-danger ml-1 fa fa-trash-alt fa-lg" title="Delete"></i></button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>
+                            Diagnosis Description
+                        </th>
+                        <th>
+                            Diagnosis Comment
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
